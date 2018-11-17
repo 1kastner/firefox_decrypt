@@ -5,6 +5,12 @@ py2:
             packages: libnss3
 
         - script:
+            name: Linting
+            code: |
+                pip install flake8
+                flake8
+
+        - script:
             name: Run tests
             code: |
                 cd tests
@@ -15,6 +21,12 @@ py3:
     steps:
         - install-packages:
             packages: libnss3
+
+        - script:
+            name: Linting
+            code: |
+                pip install flake8
+                flake8
 
         - script:
             name: Run tests
